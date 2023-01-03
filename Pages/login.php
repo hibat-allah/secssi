@@ -58,22 +58,28 @@
     $r="select `username`,`password` from `$t`";
      $req=$id->prepare($r);
     $e=$req->execute();
-    if($e) echo" succes select";
-    else echo " erreur select";
+    if($e) echo"<p style='color:#FFFFFF;'> succes select</p>";
+    else echo "<p style='color:#FFFFFF;'> erreur select</p>";
     $enreg=$req->fetch();
     $h=0;
     while($enreg){
       $A=$enreg["username"];
       $B=$enreg["password"];
       if ($A==$nom && $B==$mdp ){
-      $h=1;
-      header("Location: /secssi/Pages/menu.html");
-      echo" identification acomplie avec succes</br>";
-      echo'<a href="menu.php" style=" color: #FFFFFF;">Acceder au menu</a></br>';
-      echo'<a href="motdp.php" style=" color: #FFFFFF;"> changer de mot de passe</a>';}
+        $h=1;
+        if($A=='admin'){
+          header("Location: /secssi/Pages/admin.html");
+        }
+        else{
+          header("Location: /secssi/Pages/menu.html");
+          echo" identification acomplie avec succes</br>";
+        }
+      // echo'<a href="menu.php" style=" color: #FFFFFF;">Acceder au menu</a></br>';
+      // echo'<a href="motdp.php" style=" color: #FFFFFF;"> changer de mot de passe</a>';
+    }
       $enreg=$req->fetch();
     }
-    if($h==0)echo "user name ou mot de passe invalid";
+    if($h==0)echo "<p style='color:#FFFFFF;'>user name ou mot de passe invalid</p>";
     }
     ?>
 </body>
