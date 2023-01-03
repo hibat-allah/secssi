@@ -79,8 +79,7 @@
     }
       $enreg=$req->fetch();
     }
-    if($h==0)echo "<p style='color:#FFFFFF;'>user name ou mot de passe invalid</p>";
-    }
+  
     ?>
 </body>
 </html>
