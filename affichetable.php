@@ -36,57 +36,54 @@ $t4="Fournisseurs info";
 $t5="Magasin";
 $t6="mouvements de stocks elec";
 $t7="mouvements de stocks info";
-echo "TABLE 1";
-echo "$t1";
+echo "<p>TABLE 1</p>";
+echo "<p>$t1</p>";
 $r="select * from `$t1`";
 $req=$id->prepare($r);
 $e=$req->execute();
-if($e) echo" succes select";
-else echo " erreur select"; 
+
 echo'<table cellpadding="4" cellspacing="0" border="1" width="10"/>';
-echo'<tr><td>codeA</td><td>type</td><td>nbr d`unités</td><td>codeM</td><tr>';
+echo'<tr><td style="color:white;">codeA</td> <td style="color:white;">type</td> <td style="color:white;">nbr dunités</td><td style="color:white;">codeM</td><tr>';
 $enreg=$req->fetch();
 while($enreg){
 	$A=$enreg["codeA"];
 	$B=$enreg["type"];
-	$C=$enreg["nbr d'unités"];
+	$C=$enreg["nbr_dunites"];
 	$D=$enreg["codeM"];
 	?>
-	<tr><td><?php echo $A;?></td><td><?php echo $B;?></td><td><?php echo $C;?></td><td><?php echo $D;?></td></tr>';
+	<tr><td><?php echo"<p style='color:white;'>" . $A ."</p>";?></td><td><?php echo"<p style='color:white;'>" . $B."</p>";?></td><td><?php echo "<p style='color:white;'>" . $C."</p>";?></td><td><?php echo"<p style='color:white;'>" . $D."</p>";?></td></tr>';
     <?php
 	$enreg=$req->fetch();
 }
 echo'</table>';
-echo "TABLE 2";
-echo "$t2";
+echo "<p>TABLE 2</p>";
+echo "<p>$t2</p>";
 $r="select * from `$t2`";
 $req=$id->prepare($r);
 $e=$req->execute();
-if($e) echo" succes select";
-else echo " erreur select"; 
+
 echo'<table cellpadding="4" cellspacing="0" border="1" width="10"/>';
-echo'<tr><td>codeE</td><td>type</td><td>nombre d`unitées</td><td>codeM</td><tr>';
+echo'<tr><td style="color:white;">codeE</td><td style="color:white;">type</td><td style="color:white;">nombre d`unitées</td><td style="color:white;">codeM</td><tr>';
 $enreg=$req->fetch();
 while($enreg){
 	$A=$enreg["codeE"];
 	$B=$enreg["type"];
-	$C=$enreg["nombre d'unitées"];
+	$C=$enreg["nombre_dunitees"];
 	$D=$enreg["codeM"];
 	?>
-	<tr><td><?php echo $A;?></td><td><?php echo $B;?></td><td><?php echo $C;?></td><td><?php echo $D;?></td></tr>';
+	<tr><td><?php echo"<p style='color:white;'>" . $A ."</p>";?></td><td><?php echo"<p style='color:white;'>" . $B."</p>";?></td><td><?php echo "<p style='color:white;'>" . $C."</p>";?></td><td><?php echo"<p style='color:white;'>" . $D."</p>";?></td></tr>';
     <?php
 	$enreg=$req->fetch();
 }
 echo'</table>';
-echo "TABLE 3";
-echo "$t3";
+echo "<p>TABLE 3</p>";
+echo "<p>$t3</p>";
 $r="select * from `$t3`";
 $req=$id->prepare($r);
 $e=$req->execute();
-if($e) echo" succes select";
-else echo " erreur select"; 
+
 echo'<table cellpadding="4" cellspacing="0" border="1" width="10"/>';
-echo'<tr><td>codeFe</td><td>nom</td><td>codeE</td><tr>';
+echo'<tr><td style="color:white;">codeFe</td><td style="color:white;">nom</td><td style="color:white;">codeE</td><tr>';
 $enreg=$req->fetch();
 while($enreg){
 	$A=$enreg["codeFe"];
@@ -94,20 +91,19 @@ while($enreg){
 	$C=$enreg["codeE"];
 	
 	?>
-	<tr><td><?php echo $A;?></td><td><?php echo $B;?></td><td><?php echo $C;?></td></tr>';
+	<tr><td><?php echo"<p style='color:white;'>" . $A ."</p>";?></td><td><?php echo"<p style='color:white;'>" . $B."</p>";?></td><td><?php echo "<p style='color:white;'>" . $C."</p>";?></td></tr>';
     <?php
 	$enreg=$req->fetch();
 }
 echo'</table>';
-echo "TABLE 4";
-echo "$t4";
+echo "<p>TABLE 4</p>";
+echo "<p>$t4</p>";
 $r="select * from `$t4`";
 $req=$id->prepare($r);
 $e=$req->execute();
-if($e) echo" succes select";
-else echo " erreur select"; 
+
 echo'<table cellpadding="4" cellspacing="0" border="1" width="10"/>';
-echo'<tr><td>codeFi</td><td>nom</td><td>codeA</td><tr>';
+echo'<tr><td style="color:white;">codeFi</td><td style="color:white;">nom</td><td style="color:white;">codeA</td><tr>';
 $enreg=$req->fetch();
 while($enreg){
 	$A=$enreg["codeFi"];
@@ -115,70 +111,67 @@ while($enreg){
 	$C=$enreg["codeA"];
 	
 	?>
-	<tr><td><?php echo $A;?></td><td><?php echo $B;?></td><td><?php echo $C;?></td></tr>';
+	<tr><td><?php echo"<p style='color:white;'>" . $A ."</p>";?></td><td><?php echo"<p style='color:white;'>" . $B."</p>";?></td><td><?php echo "<p style='color:white;'>" . $C."</p>";?></td></tr>';
     <?php
 	$enreg=$req->fetch();
 }
 echo'</table>';
-echo "TABLE 5";
-echo "$t5";
+echo "<p>TABLE 5</p>";
+echo "<p>$t5</p>";
 $r="select * from `$t5`";
 $req=$id->prepare($r);
 $e=$req->execute();
-if($e) echo" succes select";
-else echo " erreur select"; 
+
 echo'<table cellpadding="4" cellspacing="0" border="1" width="10"/>';
-echo'<tr><td>codeM</td><td>nom du magasin</td><td>articles informatiques</td><td>articles électroménager</td><tr>';
+echo '<tr><td style="color:white;">codeM</td><td style="color:white;">nom du magasin</td><td style="color:white;">articles informatiques</td><td style="color:white;">articles électroménager</td><tr>';
 $enreg=$req->fetch();
 while($enreg){
 	$A=$enreg["codeM"];
-	$B=$enreg["nom du magasin"];
-	$C=$enreg["articles informatiques"];
-	$D=$enreg["articles électroménager"];
+	$B=$enreg['nom_du_magasin'];
+	$C=$enreg['articles_informatiques'];
+	$D=$enreg['articles_electromenager'];
 	?>
-	<tr><td><?php echo $A;?></td><td><?php echo $B;?></td><td><?php echo $C;?></td><td><?php echo $D;?></td></tr>';
+	<tr><td><?php echo"<p style='color:white;'>" . $A ."</p>";?></td><td><?php echo"<p style='color:white;'>" . $B."</p>";?></td><td><?php echo "<p style='color:white;'>" . $C."</p>";?></td><td><?php echo"<p style='color:white;'>" . $D."</p>";?></td></tr>';
     <?php
 	$enreg=$req->fetch();
 }
 echo'</table>';
-echo "TABLE 6";
-echo "$t6";
+echo "<p>TABLE 6</p>";
+echo "<p>$t6</p>";
 $r="select * from `$t6`";
 $req=$id->prepare($r);
 $e=$req->execute();
-if($e) echo" succes select";
-else echo " erreur select"; 
+
 echo'<table cellpadding="4" cellspacing="0" border="1" width="10"/>';
-echo'<tr><td>date d`entrée</td><td>date de sortie</td><td>codeE</td><tr>';
+echo'<tr><td style="color:white;">date d`entrée</td><td style="color:white;">date de sortie</td><td style="color:white;">codeE</td><tr>';
 $enreg=$req->fetch();
 while($enreg){
-	$A=$enreg["date d'entrée"];
-	$B=$enreg["date de sortie"];
+	$A=$enreg["date_dentree"];
+	$B=$enreg["date_de_sortie"];
 	$C=$enreg["codeE"];
 	
 	?>
-	<tr><td><?php echo $A;?></td><td><?php echo $B;?></td><td><?php echo $C;?></td></tr>';
+	<tr><td><?php echo"<p style='color:white;'>" . $A ."</p>";?></td><td><?php echo"<p style='color:white;'>" . $B."</p>";?></td><td><?php echo "<p style='color:white;'>" . $C."</p>";?></td></tr>';
     <?php
 	$enreg=$req->fetch();
 }
 echo'</table>';
-echo "TABLE 7";
-echo "$t7";
+echo "<p>TABLE 7</p>";
+echo "<p>$t7</p>";
 $r="select * from `$t7`";
 $req=$id->prepare($r);
 $e=$req->execute();
-if($e) echo" succes select";
-else echo " erreur select"; 
+
 echo'<table cellpadding="4" cellspacing="0" border="1" width="10"/>';
-echo'<tr><td>date d`entrée</td><td>date de sortie</td><td>codeA</td><tr>';
+echo'<tr><td style="color:white;">date d`entrée</td><td style="color:white;">date de sortie</td><td style="color:white;">codeA</td><tr>';
 $enreg=$req->fetch();
 while($enreg){
-	$A=$enreg["date d'entrée"];
-	$B=$enreg["date de sortie"];
+	$A=$enreg["date_dentree"];
+	$B=$enreg["date_de_sortie"];
 	$C=$enreg["codeA"];
 	
 	?>
-	<tr><td><?php echo $A;?></td><td><?php echo $B;?></td><td><?php echo $C;?></td></tr>';
+	<tr><td><?php echo"<p style='color:white;'>" . $A ."</p>";?></td><td><?php echo"<p style='color:white;'>" . $B."</p>";?></td><td><?php echo "<p style='color:white;'>" . $C."</p>";?></td></tr>';
     <?php
 	$enreg=$req->fetch();
 }
