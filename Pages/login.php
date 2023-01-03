@@ -79,7 +79,7 @@
     }
       $enreg=$req->fetch();
     }
-  
+    }
     ?>
 </body>
 </html>
