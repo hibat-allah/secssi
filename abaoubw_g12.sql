@@ -20,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `abaoubw_g12`
 --
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`username`, `password`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
 
 -- --------------------------------------------------------
 
