@@ -9,9 +9,9 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li class="navbar-item1"><a class="navbar-link" href="/secssi/Pages/index.html">Accueil</a></li>
-                <li class="navbar-item2"><a class="navbar-link" href="/secssi/Pages/index.html#about">About</a></li>
-                <li class="navbar-item3"><a class="navbar-link" href="/secssi/Pages/index.html#contact">Contact</a></li>
+                <li class="navbar-item1"><a class="navbar-link" href="/secssi">Accueil</a></li>
+                <li class="navbar-item2"><a class="navbar-link" href="/secssi/index.html#about">About</a></li>
+                <li class="navbar-item3"><a class="navbar-link" href="/secssi/index.html#contact">Contact</a></li>
                 <img src="images/logo.svg" class="logonav">
             
             </ul>
